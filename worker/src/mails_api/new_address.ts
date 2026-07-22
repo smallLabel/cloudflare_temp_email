@@ -59,7 +59,7 @@ const createNewAddress = async (c: Context<HonoCustomType>) => {
             || 'web:unknown';
         const res = await newAddress(c, {
             name, domain,
-            enablePrefix: !!c.env.ENABLE_PREFIX,,
+            enablePrefix: true,
             enableRandomSubdomain: getBooleanValue(enableRandomSubdomain),
             checkLengthByConfig: true,
             addressPrefix,
